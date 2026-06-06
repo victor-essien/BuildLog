@@ -1,17 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
-import LandingPage from './pages/LandingPage.tsx'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import LandingPage from './pages/Landing/LandingPage.tsx'
+import SignIn from './pages/auth/Signin.tsx'
+import SignUp from './pages/auth/Signup.tsx'
+import {ErrorPage} from './pages/ErrorPage.tsx'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "*",
+    element: <ErrorPage />
+  }
+])
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    <LandingPage />
-    </>
+    <RouterProvider router={router} />
   )
 }
 
