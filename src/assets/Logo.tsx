@@ -20,7 +20,7 @@ export const Logo = () => (
     </div>
      <Link
             to="/"
-            className="hidden md:block hover:text-[#FF6B35] transition-colors"
+            className="md:block hover:text-[#FF6B35] transition-colors"
           >
     <span className="font-bold text-xl tracking-tight text-[#0F172A]">
       BuildLog
