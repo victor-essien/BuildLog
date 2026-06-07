@@ -16,7 +16,7 @@ export default function NotificationPreviewCard({
   permission,
 }: NotificationPreviewCardProps) {
   return (
-    <div className="rounded-[24px] border border-[#E2E8F0] bg-white p-6 shadow-sm">
+    <div className="rounded-3xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
       <div className="flex items-center gap-4">
         <div className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#FF6B35] text-white">
           <Bell className="h-6 w-6" />

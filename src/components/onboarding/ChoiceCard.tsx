@@ -20,7 +20,7 @@ export default function ChoiceCard({
       type="button"
       onClick={onSelect}
       aria-pressed={active}
-      className={`group flex flex-col items-start gap-4 rounded-[24px] border p-6 text-left transition-all focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/40 ${
+      className={`group flex flex-col items-start gap-4 rounded-3xl border p-6 text-left transition-all focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/40 ${
         active
           ? "border-[#FF6B35] bg-[#FF6B35]/[0.08] shadow-[0_8px_24px_rgba(255,107,53,0.12)]"
           : "border-[#E2E8F0] bg-white hover:border-[#FF6B35] hover:bg-[#FFF2E8]"
