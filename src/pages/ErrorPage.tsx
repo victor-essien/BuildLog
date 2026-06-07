@@ -24,7 +24,7 @@ export const ErrorPage = () => {
             {is404 ? (
               <Wifi size={40} className="text-white" />
             ) : (
-              <AlertTriangle size={40} className="text-orange-400" />
+              <AlertTriangle size={40} className="text-white" />
             )}
           </div>
           {/* Status badge */}
@@ -40,7 +40,7 @@ export const ErrorPage = () => {
           </h1>
           <p className="text-neutral-400 text-lg leading-relaxed">
             {is404
-              ? "Looks like this page got lost in the study hall. It might have been moved, deleted, or never existed."
+              ? "Looks like this page got lost. It might have been moved, deleted, or never existed."
               : error?.message ||
                 error?.statusText ||
                 "An unexpected error occurred. Try going back or refreshing the page."}

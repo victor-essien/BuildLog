@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { type Variants } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Logo } from "../../assets/Logo";
 export default function LandingPage() {
   // Animation presets for clean, subtle motion
   const fadeUp: Variants = {
@@ -26,8 +27,7 @@ export default function LandingPage() {
       <nav className="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto md:px-12">
         <div className="flex items-center gap-2">
           {/* Minimal Logo */}
-          <div className="w-6 h-6 rounded-sm bg-[#FF6B35] rotate-3"></div>
-          <span className="font-bold text-xl tracking-tight">BuildLog</span>
+          <Logo/>
           <div className="w-2 h-2 rounded-full bg-[#FF6B35]"></div>
         </div>
 
