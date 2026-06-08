@@ -70,7 +70,7 @@ function generateDraftContent(
   }
 }
 
-export default function TodayPage() {
+export default function WorkspacePage() {
   const {
     state,
     saveWorkLog,
@@ -125,11 +125,12 @@ export default function TodayPage() {
       id: `${platform}-${Date.now()}`,
       platform,
       content: generateDraftContent(platform, state.workLog, note),
+      createdAt: new Date().toISOString(),
       isEditing: false,
     }));
 
     setDrafts(drafts);
-    logTodayProgress(state.workLog);
+    logTodayProgress(state.workLog, drafts.length, state.quickNotes.length);
   };
 
   const finishGeneration = () => {
@@ -234,7 +235,7 @@ export default function TodayPage() {
 
   return (
     <main className="min-h-screen bg-white text-[#0F172A] selection:bg-[#FFD166] selection:text-[#0F172A] font-sans">
-      <div className="mx-auto max-w-350 px-6 py-8 lg:px-10 lg:py-10">
+      <div className="  px-6 py-8 lg:px-10 lg:py-10">
         <WorkspaceHeader />
         <div className="grid gap-10 lg:grid-cols-[1.8fr_1fr]">
           <div className="space-y-8">
@@ -282,7 +283,7 @@ export default function TodayPage() {
                     type="button"
                     onClick={startGeneration}
                     disabled={!hasWorkLog || isGenerating}
-                    className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#FF6B35] px-6 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:bg-[#FFB49E] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/40"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl  bg-[#0F172A] px-6 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:bg-[#FFB49E] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/40"
                   >
                     Generate Posts
                   </button>

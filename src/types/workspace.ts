@@ -4,6 +4,7 @@ export interface DraftItem {
   id: string;
   platform: DraftPlatform;
   content: string;
+  createdAt: string;
   isEditing?: boolean;
 }
 
@@ -17,6 +18,9 @@ export interface ActivityEntry {
   id: string;
   date: string;
   summary: string;
+  workLog: string;
+  draftCount: number;
+  captureCount: number;
   createdAt: string;
 }
 

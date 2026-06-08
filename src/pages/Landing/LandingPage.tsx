@@ -27,7 +27,7 @@ export default function LandingPage() {
       <nav className="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto md:px-12">
         <div className="flex items-center gap-2">
           {/* Minimal Logo */}
-          <Logo/>
+          <Logo />
           <div className="w-2 h-2 rounded-full bg-[#FF6B35]"></div>
         </div>
 
@@ -282,7 +282,7 @@ export default function LandingPage() {
             remembering to share what they built.
           </p>
           <p className="text-lg text-[#0F172A]/70 leading-relaxed border-l-2 border-[#FF6B35] pl-4">
-            Momentum helps you stay visible without turning social media into a
+            Buildlog helps you stay visible without turning social media into a
             full-time job. Build your footprint organically, day by day.
           </p>
         </motion.div>
@@ -375,7 +375,7 @@ export default function LandingPage() {
                 >
                   <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#0F172A]/5">
                     <div className="w-4 h-4 rounded-sm bg-[#FF6B35]"></div>
-                    <span className="font-bold text-xs">Momentum</span>
+                    <span className="font-bold text-xs">Buildlog</span>
                   </div>
                   <div className="flex-1 space-y-2">
                     <div className="text-[10px] font-semibold text-[#0F172A]/50 uppercase">
@@ -438,7 +438,7 @@ export default function LandingPage() {
             <p className="text-[#0F172A]/80 text-lg leading-relaxed mb-8">
               "I used to spend hours staring at a blank screen trying to figure
               out what to post. Now, I just drop in my daily backend logs—like
-              setting up database schemas for our student app—and Momentum
+              setting up database schemas for our student app—and Buildlog
               formats it perfectly for LinkedIn. It’s practically magic."
             </p>
             <div>
@@ -456,7 +456,7 @@ export default function LandingPage() {
           >
             <p className="text-[#0F172A]/80 text-lg leading-relaxed mb-8">
               "Balancing a full-time dev role and my food blog meant my
-              technical updates got completely ignored. With Momentum, I log my
+              technical updates got completely ignored. With Buildlog, I log my
               bug fixes at the end of the day and let it handle the rest. Small
               updates, huge visibility."
             </p>
@@ -476,7 +476,7 @@ export default function LandingPage() {
             <p className="text-[#0F172A]/80 text-lg leading-relaxed mb-8">
               "Building an MVP from scratch was exhausting enough. By simply
               logging things like 'Refactored the roommate matching algorithm',
-              Momentum gave me a week's worth of founder content without the
+              Buildlog gave me a week's worth of founder content without the
               empty marketing buzzwords."
             </p>
             <div>

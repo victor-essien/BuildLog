@@ -4,7 +4,13 @@ import LandingPage from "./pages/Landing/LandingPage.tsx";
 import SignIn from "./pages/auth/Signin.tsx";
 import SignUp from "./pages/auth/Signup.tsx";
 import OnboardingPage from "./pages/onboarding/OnboardingPage.tsx";
-import TodayPage from "./pages/TodayPage.tsx";
+import WorkspacePage from "./pages/TodayPage.tsx";
+import QuickCapturePage from "./pages/QuickCapturePage.tsx";
+import DraftsPage from "./pages/DraftsPage.tsx";
+import HistoryPage from "./pages/HistoryPage.tsx";
+import ConsistencyPage from "./pages/ConsistencyPage.tsx";
+import SettingsPage from "./pages/SettingsPage.tsx";
+import AppShell from "./components/layout/AppShell.tsx";
 import { ErrorPage } from "./pages/ErrorPage.tsx";
 
 const router = createBrowserRouter([
@@ -28,9 +34,34 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/today",
-    element: <TodayPage />,
+    element: <AppShell />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "workspace",
+        element: <WorkspacePage />,
+      },
+      {
+        path: "quick-capture",
+        element: <QuickCapturePage />,
+      },
+      {
+        path: "drafts",
+        element: <DraftsPage />,
+      },
+      {
+        path: "history",
+        element: <HistoryPage />,
+      },
+      {
+        path: "consistency",
+        element: <ConsistencyPage />,
+      },
+      {
+        path: "settings",
+        element: <SettingsPage />,
+      },
+    ],
   },
   {
     path: "*",

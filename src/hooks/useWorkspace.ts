@@ -143,6 +143,15 @@ export function useWorkspace() {
     }));
   };
 
+  const updateQuickNote = (id: string, text: string) => {
+    setState((previous) => ({
+      ...previous,
+      quickNotes: previous.quickNotes.map((note) =>
+        note.id === id ? { ...note, text } : note,
+      ),
+    }));
+  };
+
   const removeQuickNote = (id: string) => {
     setState((previous) => ({
       ...previous,
@@ -175,7 +184,18 @@ export function useWorkspace() {
     }));
   };
 
-  const logTodayProgress = (summary: string) => {
+  const removeDraft = (id: string) => {
+    setState((previous) => ({
+      ...previous,
+      drafts: previous.drafts.filter((draft) => draft.id !== id),
+    }));
+  };
+
+  const logTodayProgress = (
+    workLog: string,
+    draftCount: number,
+    captureCount: number,
+  ) => {
     const today = new Date().toISOString().slice(0, 10);
     setState((previous) => {
       const alreadyLogged = previous.activityLog.some(
@@ -189,7 +209,10 @@ export function useWorkspace() {
       const entry: ActivityEntry = {
         id: createId(),
         date: today,
-        summary: summary.slice(0, 120),
+        summary: workLog.slice(0, 120),
+        workLog,
+        draftCount,
+        captureCount,
         createdAt: new Date().toISOString(),
       };
 
@@ -221,10 +244,12 @@ export function useWorkspace() {
     state,
     saveWorkLog,
     addQuickNote,
+    updateQuickNote,
     removeQuickNote,
     setDrafts,
     updateDraft,
     toggleDraftEditing,
+    removeDraft,
     logTodayProgress,
     hasActivity,
     todayLogged,

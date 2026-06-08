@@ -459,7 +459,7 @@ export default function OnboardingPage() {
               />
               <button
                 type="button"
-                onClick={() => navigate("/today")}
+                onClick={() => navigate("/workspace")}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-[#FF6B35] px-6 py-4 text-base font-semibold text-white shadow-sm transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/40"
               >
                 Log Today's Progress

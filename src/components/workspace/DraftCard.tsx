@@ -1,4 +1,4 @@
-import { ExternalLink, RefreshCcw, Copy, Edit3, X } from "lucide-react";
+import { ExternalLink, RefreshCcw, Copy, Edit3 } from "lucide-react";
 import type { DraftItem, DraftPlatform } from "../../types/workspace";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";

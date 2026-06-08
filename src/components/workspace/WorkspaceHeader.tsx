@@ -3,9 +3,9 @@ import { Logo } from "../../assets/Logo";
 
 export default function WorkspaceHeader() {
   return (
-    <header className="flex items-center justify-between gap-6 pb-8 lg:pb-10">
+    <header className="hidden md:flex items-center justify-between gap-6 pb-8 lg:pb-10">
       <div className="flex items-center gap-4">
-        <Logo />
+        {/* <Logo /> */} 
       </div>
       <div className="flex items-center gap-3">
         <button
